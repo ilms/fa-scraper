@@ -32,6 +32,6 @@ class Cooldown:
     def __call__(self, f):
         def wrap(*args, **kwargs):
             self._wait()
-            f(*args, **kwargs)
             self._reset()
+            return f(*args, **kwargs)
         return wrap
