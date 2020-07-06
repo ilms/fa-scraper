@@ -69,7 +69,7 @@ class Scraper:
         )
 
     @_global_scraper_cd
-    def get_favorites(self, user: str, after: Optional[int] = None) -> Tuple[List[Favorite], Optional[bool]]:
+    def get_favorites(self, user: str, after: Optional[int] = None) -> Tuple[List[Favorite], Optional[int]]:
         """
         Returns a list of a user's favorites.
 
